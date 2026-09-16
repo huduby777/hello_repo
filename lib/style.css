@@ -1,0 +1,412 @@
+/* =========================================================
+   Pretendard 폰트 (참고 사이트와 가장 유사한 공개 폰트)
+========================================================= */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+/* =========================================================
+   토큰 (색상 / 간격) — 여기 값만 바꾸면 전체 톤이 바뀝니다
+========================================================= */
+/*
+:root {
+  --bg: #f6f1e8;
+  --bg-card: #fdfbf7;
+  --text: #211d18;
+  --text-sub: #8a8175;
+  --text-mute: #a89f92;
+  --accent: #e0693f;
+  --accent-soft: #f2c9b6;
+  --line: #e6ddcd;
+  --black: #1c1a17;
+  --radius: 16px;
+  --radius-sm: 999px;
+  --max: 1120px;
+} */
+:root {
+  --bg: #16171b;
+  --bg-card: #1e2025;
+  --text: #f3f1ec;
+  --text-sub: #a9a7a0;
+  --text-mute: #6f6d68;
+  --accent: #ff8a5c;
+  --accent-soft: #3a2c22;
+  --line: #2b2d32;
+  --black: #f3f1ec;
+  --radius: 16px;
+  --radius-sm: 999px;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard Variable", Pretendard,"Malgun Gothic", sans-serif;
+  line-height: 1.6;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 22px 22px; /* 이 줄 삭제 */
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* =========================================================
+   헤더
+========================================================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(22, 23, 27, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+}
+.header.scrolled { border-bottom-color: var(--line); }
+
+.header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+.logo span { color: var(--accent); }
+
+.nav { display: flex; gap: 30px; }
+.nav a {
+  font-size: 14px;
+  color: var(--text-sub);
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.nav a:hover, .nav a.active { color: var(--text); }
+
+.nav-toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.nav-toggle span { display: block; height: 2px; background: var(--text); border-radius: 2px; }
+
+/* =========================================================
+   히어로
+========================================================= */
+.hero {
+  padding: 110px 0 100px;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+
+.hero-sub {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.hero-sub .accent { color: var(--accent); }
+
+.hero-desc {
+  color: var(--text-sub);
+  font-size: 15.5px;
+  max-width: 460px;
+  margin-bottom: 34px;
+}
+
+.btn-row { display: flex; gap: 12px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-black { background: var(--black); color: #16171b; }
+.btn-black:hover { background: #ffffff; }
+
+.btn-outline { background: var(--bg-card); border-color: var(--line); color: var(--text); }
+.btn-outline:hover { border-color: var(--text-mute); }
+
+.hero-photo-box { position: relative; justify-self: center; }
+.hero-photo-frame {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-soft);
+  border-radius: 28px;
+  transform: rotate(6deg);
+}
+.hero-photo {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #2a2c31;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-photo svg { width: 55%; opacity: 0.35; }
+
+/* =========================================================
+   섹션 공통
+========================================================= */
+.section { padding: 90px 0; border-top: 1px solid var(--line); }
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+.section-eyebrow .num { color: var(--accent); }
+.section-eyebrow .dash { width: 34px; height: 1px; background: var(--accent); display: inline-block; }
+.section-eyebrow .label { color: var(--text-mute); font-weight: 600; }
+
+.section-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.section-desc { color: var(--text-sub); font-size: 15px; margin-bottom: 46px; }
+
+/* =========================================================
+   About
+========================================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.about-lead { font-size: 24px; font-weight: 700; line-height: 1.5; margin-bottom: 18px; }
+.about-lead .accent { color: var(--accent); }
+.about-text { color: var(--text-sub); font-size: 15px; }
+
+.skill-group { margin-bottom: 26px; }
+.skill-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-mute);
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+.skill-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   Career / Education 타임라인
+========================================================= */
+.timeline { position: relative; padding-left: 28px; border-left: 2px solid var(--line); }
+.timeline-item { position: relative; padding-bottom: 46px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+.timeline-date { color: var(--accent); font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.timeline-org { font-size: 19px; font-weight: 800; margin-bottom: 4px; }
+.timeline-role { color: var(--text-sub); font-size: 14px; margin-bottom: 14px; }
+.timeline-list { margin-bottom: 18px; }
+.timeline-list li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--text-sub);
+  font-size: 14.5px;
+  margin-bottom: 7px;
+}
+.timeline-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-mute);
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+/* =========================================================
+   필터 탭 (Project / Cert 공용)
+========================================================= */
+.filter-row { display: flex; gap: 10px; margin-bottom: 8px; }
+.filter-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-sub);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* =========================================================
+   Project 리스트
+========================================================= */
+.project-list { margin-top: 38px; border-top: 1px solid var(--line); }
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 26px 4px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: padding-left 0.18s ease;
+}
+.project-item:hover { padding-left: 14px; }
+.project-num { color: var(--accent); font-weight: 700; font-size: 14px; width: 26px; flex-shrink: 0; }
+.project-name { font-size: 19px; font-weight: 700; flex: 1; }
+.project-cat { font-size: 12px; font-weight: 700; color: var(--text-mute); letter-spacing: 0.05em; }
+.project-item[hidden] { display: none; }
+
+/* =========================================================
+   Certification 리스트
+========================================================= */
+.cert-list { margin-top: 38px; border-top: 1px solid var(--line); }
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--line);
+}
+.cert-tag {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.cert-name { font-size: 16px; font-weight: 700; flex: 1; }
+.cert-issuer { color: var(--text-sub); font-size: 13.5px; }
+.cert-date { color: var(--text-mute); font-size: 13px; width: 78px; text-align: right; flex-shrink: 0; }
+.cert-item[hidden] { display: none; }
+
+/* =========================================================
+   Contact
+========================================================= */
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 56px;
+  text-align: center;
+}
+.contact-title { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+.contact-desc { color: var(--text-sub); font-size: 15px; margin-bottom: 32px; }
+.contact-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+.footer {
+  text-align: center;
+  padding: 34px 0 50px;
+  color: var(--text-mute);
+  font-size: 13px;
+}
+
+/* =========================================================
+   반응형
+========================================================= */
+@media (max-width: 860px) {
+  .nav { display: none; }
+  .nav-toggle { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-photo-box { order: -1; }
+  .hero-photo { width: 220px; height: 270px; }
+  .hero-title { font-size: 40px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-card { padding: 36px 22px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 32px; }
+  .cert-item { flex-wrap: wrap; }
+  .cert-date { width: auto; margin-left: auto; }
+}
