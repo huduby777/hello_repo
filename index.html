@@ -1,245 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fortfolio</title>
-    <meta name="description" content="포트폴리오" />
-    <link rel="stylesheet" href="lib\style.css" />
+    <meta name="description" content="Your Name — Frontend developer portfolio" />
+    <title>Your Name — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
   </head>
-<body>
+  <body class="portfolio-v4">
+    <div class="site-frame">
+      <aside class="sidebar">
+        <a class="identity" href="#top"><span class="identity-mark">M.K</span><span>Mee.Kyoung</span></a>
+        <p class="role">Frontend developer<br />& curious maker</p>
+        <nav class="side-nav" aria-label="주요 메뉴">
+          <a class="active" href="#about" aria-current="page"><span>01</span> About me</a>
+          <a href="#knowledge"><span>02</span> Knowledge map</a>
+          <a href="#projects"><span>03</span> Projects</a>
+          <a href="#teaching"><span>04</span> Teaching</a>
+          <a href="#learning"><span>05</span> Learning log</a>
+          <a href="#contact"><span>06</span> Contact</a>
+        </nav>
+        <div class="sidebar-bottom"><span>Based in Seoul, KR</span><span class="availability"><i></i> Open to ideas</span></div>
+      </aside>
 
-<!-- ============ 헤더 ============ -->
-<header class="header">
-  <div class="header-inner">
-    <a href="#" class="logo">Fortfolio<span>.</span></a>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#career">Career</a>
-      <a href="#project">Project</a>
-      <a href="#cert">Cert.</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-toggle" aria-label="메뉴 열기">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+      <main id="top" class="content">
+        <section id="about" class="intro section-block">
+          <div class="section-meta">&nbsp;</div>
+          <div class="intro-content">
+            <p class="label">HELLO, I'M MeeKyoung</p>
+            <h1>I make the web<br /><em>feel human.</em></h1>
+            <p class="intro-text">배우고, 만들고, 정리하며 더 나은 디지털 경험을 고민하는 프론트엔드 개발자입니다.</p>
+          <div class="intro-links">
+            <a class="button" href="#projects">View projects <span>↘</span></a>
+            <a class="under-link" href="mailto:hello@example.com">hello@example.com</a></div></div>
+          <div class="intro-stamp"><span>SELECTED<br />WORKS</span><b>✳</b></div>
+        </section>
 
-<main class="wrap">
-
-  <!-- ============ 히어로 ============ -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div>
-        <p class="eyebrow">안녕하세요</p>
-        <h1 class="hero-title">서울사이버대학교<br />인공지능학과</h1>
-        <p class="hero-sub">4학년 <span class="accent">이미경</span> 입니다.</p>
-        <p class="hero-desc">
-          MyHeritage의 Deep Nostalgia가 오래된 사진을 움직이는 모습을 보고 인공지능에 매료되어 쭉 혼자서 공부를 해오다가 서울사이버대학교 인공지능학과에 편입했습니다. 
-          현재는 SW 강사이자 4학년 학생으로, AI와 데이터 분석을 쉽고 재미있게 전달하는 교육 콘텐츠를 만들고 있습니다.
-        </p>
-      </div>
-      <div class="hero-photo-box">
-        <div class="hero-photo-frame"></div>
-        <div class="hero-photo">
-          <!-- 실제 프로필 사진으로 교체: <img src="profile.jpg" alt="프로필 사진" /> -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ About ============ -->
-  <section class="section" id="about">
-    <p class="section-eyebrow"><span class="num">01</span><span class="dash"></span></p>
-    <h2 class="section-title">About me</h2>
-
-    <div class="about-grid">
-      <div>
-        <p class="about-lead">
-          사용자 관점에서 고민하는<br />
-          프론트엔드 개발자 <span class="accent">홍길동</span>입니다.
-        </p>
-        <p class="about-text">
-          2022년부터 스타트업에서 프론트엔드 개발자로 일하며 대형 서비스의
-          공통 컴포넌트 설계부터 신규 프로젝트 배포까지 폭넓게 경험했습니다.
-          사이드 프로젝트로 실제 사용자가 있는 서비스를 꾸준히 만들며
-          기술은 깊게, 협업은 유연하게 성장하고 있습니다.
-        </p>
-      </div>
-
-      <div>
-        <div class="skill-group">
-          <p class="skill-label">FRONT-END</p>
-          <div class="skill-pills">
-            <span class="pill"><span class="dot"></span>React</span>
-            <span class="pill"><span class="dot"></span>Vite</span>
-            <span class="pill"><span class="dot"></span>Tailwind CSS</span>
-            <span class="pill"><span class="dot"></span>Next.js</span>
-            <span class="pill"><span class="dot"></span>HTML5</span>
-            <span class="pill"><span class="dot"></span>CSS3</span>
-            <span class="pill"><span class="dot"></span>JavaScript</span>
-            <span class="pill"><span class="dot"></span>TypeScript</span>
+        <section id="knowledge" class="section-block">
+          <div class="section-head">
+            <div class="section-meta"><span>02</span><span>Knowledge map</span></div>
+            <p>Tools are useful when they connect an idea to a person.</p></div>
+          <div class="knowledge-grid">
+            <div class="knowledge-feature"><span class="label">MY APPROACH</span><strong>Learn<br /><em>in public.</em></strong><p>기초를 단단하게 쌓고, 배운 것을 실제 결과물로 연결합니다.</p></div>
+            <div class="knowledge-item"><span>01 / STRUCTURE</span><strong>HTML</strong><p>의미 있는 구조와 콘텐츠</p></div>
+            <div class="knowledge-item"><span>02 / VISUAL</span><strong>CSS</strong><p>레이아웃과 반응형 인터페이스</p></div>
+            <div class="knowledge-item"><span>03 / LOGIC</span><strong>JavaScript</strong><p>상호작용과 화면의 흐름</p></div>
+            <div class="knowledge-item"><span>04 / MINDSET</span><strong>UX thinking</strong><p>관찰하고 반복해서 개선하기</p></div>
           </div>
-        </div>
-        <div class="skill-group">
-          <p class="skill-label">TOOLS</p>
-          <div class="skill-pills">
-            <span class="pill"><span class="dot"></span>GitHub</span>
-            <span class="pill"><span class="dot"></span>Notion</span>
-            <span class="pill"><span class="dot"></span>Figma</span>
-            <span class="pill"><span class="dot"></span>Slack</span>
+        </section>
+
+        <section id="projects" class="section-block">
+          <div class="section-head"><div class="section-meta"><span>03</span><span>Projects</span></div><p>Four small steps in a growing practice.</p></div>
+          <div class="projects-grid">
+            <article class="project-card"><div class="project-art art-archive"><span>01</span><b>fresh<br />ideas.</b><i>archive / 2024</i></div><div class="project-copy"><div><h3>Archive of ideas</h3><p>영감과 생각을 기록하고 다시 발견하는 개인 아카이브</p></div><span class="project-arrow">↗</span></div><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+            <article class="project-card"><div class="project-art art-timer"><span>02</span><b>10:24</b><i>focus timer / 2024</i></div><div class="project-copy"><div><h3>Focus timer</h3><p>몰입을 돕는 심플한 타이머</p></div><span class="project-arrow">↗</span></div><div class="tags"><span>JavaScript</span><span>UI</span></div></article>
+            <article class="project-card project-trigger" role="button" tabindex="0" data-project="learning-dashboard" aria-label="Learning dashboard 프로젝트 상세 보기"><div class="project-art art-dashboard"><span>03</span><div class="mini-chart"><b>Learning<br />progress</b><div><i></i><i></i><i></i><i></i></div></div><i>learning dashboard / 2024</i><em class="view-hint">Click to view ↗</em></div><div class="project-copy"><div><h3>Learning dashboard</h3><p>학습 흐름을 한눈에 확인하는 대시보드</p></div><span class="project-arrow">↗</span></div><div class="tags"><span>CSS Grid</span><span>Data UI</span></div></article>
+            <article class="project-card"><div class="project-art art-experiment"><span>04</span><b>PLAY<br /><em>MAKE</em><br />LEARN</b><i>daily experiment / 2024</i></div><div class="project-copy"><div><h3>Daily experiment</h3><p>매일 하나씩 만드는 작은 웹 실험</p></div><span class="project-arrow">↗</span></div><div class="tags"><span>Creative coding</span><span>Process</span></div></article>
           </div>
-        </div>
-      </div>
+        </section>
+
+        <section id="teaching" class="section-block split-section"><div class="section-meta"><span>04</span><span>Teaching</span></div><div><p class="label">SHARE WHAT YOU KNOW</p><h2>배운 것을 나누면<br /><em>이해가 더 깊어집니다.</em></h2><p class="body-copy">스터디와 동료 학습을 통해 배운 내용을 정리하고 공유합니다. 복잡한 개념을 쉬운 언어로 설명하며 함께 성장하는 방법을 연습하고 있습니다.</p></div></section>
+
+        <section id="learning" class="section-block"><div class="section-head"><div class="section-meta"><span>05</span><span>Learning log</span></div><p>Notes from the process.</p></div><div class="log-list"><a href="#" class="log-row"><span>2024. 06. 18</span><strong>좋은 UI는 왜 편안하게 느껴질까?</strong><b>↗</b></a><a href="#" class="log-row"><span>2024. 06. 11</span><strong>CSS Grid로 반응형 레이아웃 설계하기</strong><b>↗</b></a><a href="#" class="log-row"><span>2024. 05. 29</span><strong>JavaScript로 작은 상호작용 만들기</strong><b>↗</b></a></div></section>
+
+        <footer id="contact" class="contact-footer">
+          <div class="section-meta">&nbsp;</div>
+          <div class="contact-content">
+            <p class="label">&nbsp;</p>
+            <h2>Let's make<br /><em>something useful.</em></h2>
+            <a class="contact-mail" href="mailto:hello@example.com">hello@example.com <span>↗</span></a>
+          </div>
+
+          <div class="footer-line"><span>© 2024 Your Name</span><span>Made with curiosity &amp; code.</span><a href="#top">Back to top ↑</a></div>
+        </footer>
+      </main>
     </div>
-  </section>
 
-  <!-- ============ Career ============ -->
-  <section class="section" id="career">
-    <p class="section-eyebrow"><span class="num">02</span><span class="dash"></span></p>
-    <h2 class="section-title">Career</h2>
-    <p class="section-desc">경력 사항입니다.</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <p class="timeline-date">2022.03 - 재직중</p>
-        <h3 class="timeline-org">(주)회사이름</h3>
-        <p class="timeline-role">@ 프로덕트팀 · 프론트엔드 웹 개발</p>
-        <ul class="timeline-list">
-          <li>서비스 랜딩페이지 기획 및 유지보수</li>
-          <li>React, TypeScript를 활용한 관리자 대시보드 개발</li>
-          <li>공통 컴포넌트 라이브러리 설계 및 구축</li>
-          <li>Next.js를 활용한 사내 서비스 리뉴얼 작업</li>
-        </ul>
-        <div class="tag-row">
-          <span class="tag">React</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Tailwind CSS</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <p class="timeline-date">2021.01 - 2022.02</p>
-        <h3 class="timeline-org">(주)이전회사</h3>
-        <p class="timeline-role">@ 웹개발팀 · 프론트엔드 개발</p>
-        <ul class="timeline-list">
-          <li>HTML, CSS, JavaScript를 활용한 반응형 웹 개발</li>
-          <li>사내 API 연동 및 화면 퍼블리싱</li>
-        </ul>
-        <div class="tag-row">
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">JavaScript</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Project ============ -->
-  <section class="section" id="project">
-    <p class="section-eyebrow"><span class="num">03</span><span class="dash"></span></p>
-    <h2 class="section-title">Projects</h2>
-    <p class="section-desc">과제 혹은 개인적으로 만들었던 프로젝트입니다. </p>
-
-    <div class="project-list">
-      <div class="project-item" data-cat="work">
-        <span class="project-num">01</span>
-        <span class="project-name">사내 관리자 대시보드 구축</span>
-        <span class="project-cat">WORK</span>
-      </div>
-      <div class="project-item" data-cat="team">
-        <span class="project-num">02</span>
-        <span class="project-name">팀 프로젝트 협업 툴 만들기</span>
-        <span class="project-cat">TEAM</span>
-      </div>
-      <div class="project-item" data-cat="single">
-        <span class="project-num">03</span>
-        <span class="project-name">개인 블로그 리뉴얼</span>
-        <span class="project-cat">SINGLE</span>
-      </div>
-      <div class="project-item" data-cat="single">
-        <span class="project-num">04</span>
-        <span class="project-name">포트폴리오 랜딩페이지</span>
-        <span class="project-cat">SINGLE</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Certification ============ -->
-  <section class="section" id="cert">
-    <p class="section-eyebrow"><span class="num">04</span><span class="dash"></span></p>
-    <h2 class="section-title">Certification</h2>
-    <p class="section-desc">보유하고 있는 자격증 목록입니다.</p>
-
-    <div class="cert-list">
-      <div class="cert-item" data-cat="개발">
-        <span class="cert-tag">개발</span>
-        <span class="cert-name">정보처리기사</span>
-        <span class="cert-issuer">한국산업인력공단</span>
-        <span class="cert-date">2022.05</span>
-      </div>
-      <div class="cert-item" data-cat="OA">
-        <span class="cert-tag">OA</span>
-        <span class="cert-name">컴퓨터활용능력 1급</span>
-        <span class="cert-issuer">대한상공회의소</span>
-        <span class="cert-date">2021.11</span>
-      </div>
-      <div class="cert-item" data-cat="디자인">
-        <span class="cert-tag">디자인</span>
-        <span class="cert-name">GTQ 1급</span>
-        <span class="cert-issuer">한국생산성본부</span>
-        <span class="cert-date">2021.03</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Education ============ -->
-  <section class="section" id="education">
-    <p class="section-eyebrow"><span class="num">05</span><span class="dash"></span></p>
-    <h2 class="section-title">Education</h2>
-    <p class="section-desc">교육 및 학력 사항입니다.</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <p class="timeline-date">2020.09 - 2021.02</p>
-        <h3 class="timeline-org">프론트엔드 개발 부트캠프</h3>
-        <p class="timeline-role">@ 교육기관 이름 · 6개월 과정</p>
-        <ul class="timeline-list">
-          <li>HTML, CSS, JavaScript 기초부터 실전 프로젝트까지 학습</li>
-          <li>팀 프로젝트로 실서비스 기획 및 배포 경험</li>
-        </ul>
-      </div>
-
-      <div class="timeline-item">
-        <p class="timeline-date">2015.03 - 2020.02</p>
-        <h3 class="timeline-org">OO대학교</h3>
-        <p class="timeline-role">컴퓨터공학과 · 학사 졸업</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ Contact ============ -->
-  <section class="section" id="contact">
-    <p class="section-eyebrow"><span class="num">06</span><span class="dash"></span></p>
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-links">
-      <a class="btn btn-black" href="mailto:example@email.com">Email 보내기</a>
-      <a class="btn btn-outline" href="https://github.com/" target="_blank" rel="noopener">GitHub 보기</a>
-  </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <p>&copy; 2026 이미경. All rights reserved.</p>
-</footer>
-
-<script src="lib\script.js"></script>
-</body>
+    <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel">
+        <button class="modal-close" type="button" aria-label="프로젝트 상세 닫기" data-modal-close>×</button>
+      <div class="modal-image art-dashboard">
+        <span>03</span><div class="mini-chart"><b>Learning<br />progress</b><div><i></i><i></i><i></i><i></i></div></div></div><div class="modal-copy"><p class="label">PROJECT DETAIL</p><h2 id="modal-title">Learning dashboard</h2><p>학습 목표와 진행 상황을 한눈에 확인할 수 있도록 만든 대시보드 프로젝트입니다. 복잡한 정보를 카드와 그래프로 나누어 보여주고, 사용자가 다음 학습 행동을 쉽게 선택할 수 있도록 구성했습니다.</p><div class="tags"><span>HTML</span><span>CSS Grid</span><span>JavaScript</span></div></div></div></div>
+  </body>
 </html>
